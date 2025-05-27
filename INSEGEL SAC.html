@@ -1,23 +1,60 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Infraestructura & Seguridad Electrónica</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet"/>
+  <!-- AOS Animations -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet"/>
+
   <style>
     body {
       padding-top: 4rem;
+      scroll-behavior: smooth;
     }
+
     .product-card {
       margin-bottom: 2rem;
+    }
+
+    .whatsapp-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 1000;
+      background-color: #25d366;
+      color: white;
+      border-radius: 50%;
+      padding: 15px;
+      font-size: 24px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+      transition: transform 0.3s ease;
+    }
+
+    .whatsapp-button:hover {
+      transform: scale(1.1);
+    }
+
+    header {
+      background: linear-gradient(to right, #0d6efd, #0a58ca);
+    }
+
+    footer {
+      background-color: #212529;
     }
   </style>
 </head>
 <body>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">Infraestructura & Seguridad Electrónica</a>
+      <a class="navbar-brand" href="#">Werken Store</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -31,62 +68,78 @@
     </div>
   </nav>
 
-  <header class="bg-primary text-white text-center py-5">
-    <h1>Bienvenido a Infraestructura & Seguridad Electrónica</h1>
-    <p>Tu tienda de confianza en cámaras de vigilancia y herramientas</p>
+  <!-- Encabezado -->
+  <header class="text-white text-center py-5" data-aos="fade-down">
+    <h1>Infraestructura & Seguridad Electrónica</h1>
+    <p>Tu tienda de confianza en cámaras de vigilancia y herramientas Werken</p>
   </header>
 
+  <!-- Contenido Principal -->
   <main class="container my-5">
-    <section id="camaras">
+    <!-- Cámaras -->
+    <section id="camaras" data-aos="fade-up">
       <h2 class="mb-4">Cámaras de Vigilancia</h2>
       <div class="row">
         <div class="col-md-4 product-card">
-          <div class="card">
-            <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Camara IP">
-            <div class="card-body">
+          <div class="card h-100">
+            <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Cámara IP">
+            <div class="card-body d-flex flex-column">
               <h5 class="card-title">Cámara IP 1080p</h5>
               <p class="card-text">Vigilancia HD con visión nocturna.</p>
               <p><strong>S/ 120.00</strong></p>
-              <button class="btn btn-success">Agregar al carrito</button>
+              <button class="btn btn-success mt-auto"><i class="bi bi-cart-plus"></i> Agregar al carrito</button>
             </div>
           </div>
         </div>
-        <!-- Más productos aquí -->
+        <!-- Puedes duplicar esta tarjeta para más cámaras -->
       </div>
     </section>
 
-    <section id="herramientas" class="mt-5">
+    <!-- Herramientas -->
+    <section id="herramientas" class="mt-5" data-aos="fade-up">
       <h2 class="mb-4">Herramientas Werken</h2>
       <div class="row">
         <div class="col-md-4 product-card">
-          <div class="card">
+          <div class="card h-100">
             <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Taladro Werken">
-            <div class="card-body">
+            <div class="card-body d-flex flex-column">
               <h5 class="card-title">Taladro Percutor Werken</h5>
               <p class="card-text">Potente y resistente, ideal para uso profesional.</p>
               <p><strong>S/ 250.00</strong></p>
-              <button class="btn btn-success">Agregar al carrito</button>
+              <button class="btn btn-success mt-auto"><i class="bi bi-cart-plus"></i> Agregar al carrito</button>
             </div>
           </div>
         </div>
-        <!-- Más productos aquí -->
+        <!-- Más herramientas aquí -->
       </div>
     </section>
 
-    <section id="contacto" class="mt-5">
+    <!-- Contacto -->
+    <section id="contacto" class="mt-5" data-aos="zoom-in">
       <h2>Contacto</h2>
       <p>Para pedidos y consultas:</p>
       <ul>
-        <li>WhatsApp: <a href="https://wa.me/519XXXXXXXX">+51 9XXXXXXXX</a></li>
-        <li>Email: <a href="mailto:ventas@werkenstore.com">ventas@werkenstore.com</a></li>
+        <li><i class="bi bi-whatsapp"></i> WhatsApp: <a href="https://wa.me/519XXXXXXXX" target="_blank">+51 9XXXXXXXX</a></li>
+        <li><i class="bi bi-envelope"></i> Email: <a href="mailto:ventas@werkenstore.com">ventas@werkenstore.com</a></li>
       </ul>
     </section>
   </main>
 
-  <footer class="bg-dark text-white text-center py-3">
+  <!-- Footer -->
+  <footer class="text-white text-center py-3">
     &copy; 2025 Infraestructura & Seguridad Electrónica. Todos los derechos reservados.
   </footer>
 
+  <!-- Botón flotante de WhatsApp -->
+  <a href="https://wa.me/519XXXXXXXX" class="whatsapp-button" target="_blank" aria-label="WhatsApp">
+    <i class="bi bi-whatsapp"></i>
+  </a>
+
+  <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </body>
 </html>
